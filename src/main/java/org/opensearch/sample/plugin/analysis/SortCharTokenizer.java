@@ -5,6 +5,7 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
@@ -41,7 +42,7 @@ public class SortCharTokenizer extends Tokenizer {
 			throw new RuntimeException(e);
 		}
 
-		char[] stringBuilderChars = stringBuilder.toString().toLowerCase().toCharArray();
+		char[] stringBuilderChars = stringBuilder.toString().toLowerCase(Locale.US).toCharArray();
 		Arrays.sort(stringBuilderChars);
 		this.stringToTokenize = new String(stringBuilderChars);
 
