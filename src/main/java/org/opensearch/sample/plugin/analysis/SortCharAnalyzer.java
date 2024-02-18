@@ -2,8 +2,8 @@ package org.opensearch.sample.plugin.analysis;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.LowerCaseFilter;
-import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.Tokenizer;
 
 public class SortCharAnalyzer extends Analyzer {
 	@Override

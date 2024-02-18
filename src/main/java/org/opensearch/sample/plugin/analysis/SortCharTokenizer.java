@@ -78,7 +78,6 @@ public class SortCharTokenizer extends Tokenizer {
 				result.add(stream.getAttribute(CharTermAttribute.class).toString());
 			}
 		} catch (IOException ex) {
-			System.out.println(ex.getMessage());
 			throw new RuntimeException(ex);
 		}
 		return result;
